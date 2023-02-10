@@ -1,0 +1,40 @@
+Programming 1 - Laboratories: Graded Task 6 (Version B)
+Before you start, download main.c file available at the bottom of the page and copy its content into the source file where you will be solving this task. For each part of the task uncomment given code and fill missing code.
+
+In this task you will be implementing operations on a word list represented as a doubly-linked list. You are given three data structures:
+
+Word - a single word with its word array and the length of the word,
+ListElement - linked list element storing a word,
+List - linked list representing a list of words.
+
+Write the following functions:
+
+  Word SetWord(const char *word);
+  Initializes a Word with given string word and its length.
+
+  ListElement *CreateElement(const char *str);
+  Allocates a new ListElement and initializes it with str. Returns a pointer to the element or NULL if allocation failed.
+  
+Write a function:
+
+  void InsertFirst(ListElement *el, List *list);
+  which add a word at the beginning of the List.
+
+Write a function:
+
+  void PrintListRev(const List *list);
+  which print the list elements in reverse order using PrintWord function.
+
+  void DeleteList(List *list);
+  which frees all elements in the List and set head and tail to NULL.
+  
+  double AvgWordsLength(const List *list);
+  which calculate the average length of all words in list (you may use the length field).
+  
+  ListElement *UnlinkElement(List *list, ListElement *el);
+  which unlinks an element el from the list. Consider what needs to happen to unlink:
+
+    the only element,
+    the first element,
+    the last element,
+    an element in the middle.
